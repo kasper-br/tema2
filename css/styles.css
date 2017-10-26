@@ -1,0 +1,293 @@
+* {
+	margin:0;
+	padding:0;
+}
+
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+.pre h1 {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+}
+
+.pre h2 {
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 15px;
+  font-size: 28px;
+}
+
+.pre p {
+  font-size: 15px;
+  line-height: 19px;
+  text-align: center;
+  font-weight: 400;
+}
+
+.pre .mobileonly {
+  display: block;
+}
+
+.pre .desktoponly {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .pre .mobileonly {
+    display: none;
+  }
+
+  .pre .desktoponly {
+    display: block;
+  }
+
+  .pre h2, .pre p {
+    text-align: left;
+  }
+}
+
+.pre img {
+  max-width: 100%;
+  height: auto;
+}
+
+.pre .logo {
+  display: inline-block;
+  padding: 20px;
+  font-size: 20px;
+  text-decoration: none;
+  color: white;
+  font-weight: 700;
+  position: relative;
+  z-index: 2;
+}
+
+.pre nav {
+	background-color: rgba(0,0,0,0.9);
+	max-height: 0;
+	overflow: hidden;
+  position: relative;
+  z-index: 99999;
+}
+
+.pre nav ul {
+	padding: 30px;
+  list-style: none;
+}
+
+.pre nav a {
+  color: white;
+  text-align: center;
+  font-size: 18px;
+  line-height: 45px;
+  text-decoration: none;
+  display: block;
+}
+
+.pre nav a:hover {
+  text-decoration: underline;
+}
+
+.pre nav a.active {
+  font-weight: 700;
+  text-decoration: none;
+}
+
+
+@media screen and (min-width: 768px) {
+  .pre nav {
+    max-height: 100%;
+    background: none;
+    float: right;
+  }
+  .pre nav ul { padding: 10px 20px; }
+  .pre nav ul li {
+    display: inline-block;
+    padding: 0 10px;
+  }
+}
+
+.pre label {
+	display: inline-block;
+	cursor: pointer;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  z-index: 2;
+  width: 30px;
+  height: 30px;
+}
+
+/* Motoren */
+.pre input[type="checkbox"]:checked + label + nav {
+	max-height: 400px;
+	transition: 300ms ease;
+}
+
+/* HEADER */
+.pre header {
+	background-image: url('../img/pre-header.jpg');
+	background-repeat: no-repeat;
+	height: 60vh;
+	background-size: cover;
+	background-position: center;
+	position: relative;
+}
+
+.pre header:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom:0;
+  left:0;
+  right:0;
+  background-color: rgba(0,0,0,.45);
+}
+
+
+/* Sections */
+.pre article {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 45px 15px;
+}
+
+@media screen and (min-width: 768px) {
+  .pre article { overflow: auto; clear: both; }
+  .pre article section {
+      float: left;
+      width: 50%;
+  }
+  .pre article section:nth-of-type(1) {
+    padding-left: 30px;
+  }
+}
+
+.pre figure {
+  padding: 45px 0 0;
+}
+
+.pre figcaption {
+  text-align: center;
+  font-size: 40px;
+	margin-top: 30px;
+}
+
+.pre .price {
+  font-size: 30px;
+  margin-top: 30px;
+}
+
+@media screen and (min-width: 768px) {
+  .pre figure {
+    padding: 0;
+  }
+}
+
+
+/* CTA */
+.pre section.cta a {
+  background: #2b2b2b;
+  padding: 45px 15px;
+  text-align: center;
+  color: white;
+  display: block;
+  transition: 300ms ease;
+  text-decoration: none;
+}
+
+.pre section.cta a span:nth-of-type(1) {
+  display: block;
+  font-weight: 400;
+  font-size: 15px;
+  margin-bottom: 5px;
+}
+
+.pre section.cta a span:nth-of-type(2) {
+  display: block;
+  font-weight: 700;
+  font-size: 30px;
+}
+
+.pre section.cta a:hover {
+  background: #000000;
+}
+
+
+/* Footer */
+.pre footer {
+  padding: 45px 15px;
+}
+
+.pre footer ul {
+  list-style: none;
+  padding:0;
+  margin-bottom: 15px;
+}
+
+.pre footer a {
+  text-decoration: none;
+  color: #000000;
+}
+
+.pre footer a:hover {
+  text-decoration: underline;
+}
+
+.pre ul.icons {
+  /*max-width: 75%;*/
+  margin: 0 auto 45px;
+  overflow: auto;
+  text-align: center;
+}
+
+.pre ul.icons li {
+  display: inline-block;
+  max-width: 170px;
+  width: 100%;
+  padding: 0 10px;
+  text-align: center;
+}
+
+.pre ul.icons li:nth-of-type(1) {
+  position: relative;
+  top: -5px;
+}
+
+.pre ul.address.one li, .pre ul.address.two li {
+  text-align: center;
+  display: block;
+  line-height: 22px;
+  font-size: 15px;
+}
+
+.pre ul.social {
+  margin: 0 auto;
+  overflow: auto;
+  max-width: 75%;
+  text-align: center;
+}
+
+.pre ul.social li {
+  display: inline-block;
+  width: 30px;
+  margin: 30px 10px 0;
+}
+
+.pre ul.social li:nth-of-type(1) {
+  width: 34px;
+}
